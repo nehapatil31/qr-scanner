@@ -19,7 +19,9 @@ const qrCodeScanner = async(buffer, res) => {
                     res.status(500).json(msg);
                 } else {
                     msg = { 'text': value.result };
-                    res.status(200).json({ value: value.result });
+                    res.render('response', {
+                        text: value.result
+                    });
                 }
                 return msg;
             };

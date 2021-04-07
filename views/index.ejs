@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>EJS Engine</title>
-  </head>
-  <body>
-      <p>Image Upload</p>
-      <form method="post" action="upload/post" enctype="multipart/form-data">
-        <input type="file" name="image" /><br /><br />
-        <button type="submit" name="upload">Upload</button>
-      </form>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <title>QrCode</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2>Please Upload Image</h2>
+            <form id='imageForm' method="post" action="upload/post" enctype="multipart/form-data">
+                <input required id="fileInput" type="file" name="image" /><br /><br />
+                <button class='btn' type="submit" name="upload">
+                    <span>Upload</span>
+                </button>
+            </form>
+        </div>
+    </body>
 </html>
